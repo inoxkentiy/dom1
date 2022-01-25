@@ -7,13 +7,13 @@ let qs = require("querystring");
 let server = http.createServer(function (req, res) {
     if (req.url === "/") {
         if (req.method === "GET") {
-            let content = fs.readFileSync("./html/main.html", "utf-8");
+            let content = fs.readFileSync("./main.html", "utf-8");
             res.end(content);
         }
     }
     else if (req.url === "/students") {
         if (req.method === "GET") {
-            let content = fs.readFileSync("./html/students.html", "utf-8");
+            let content = fs.readFileSync("./students.html", "utf-8");
             res.write(content);
         } else if (req.method === "POST") {
             let body = "";
